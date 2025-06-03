@@ -63,3 +63,25 @@ PUT /products/{id}
 
 5. Delete Product
 DELETE /products/{id}
+
+## Features
+- RESTful API endpoints
+- Request validation
+- Pagination
+- Docker support
+- Unit tests
+
+## Requirements
+- Docker
+- Docker Compose
+
+## Installation
+1. Clone the repository
+2. Copy `.env.example` to `.env` and update database credentials
+3. Run the following commands:
+
+```bash
+docker-compose up -d --build
+docker-compose exec app composer install
+docker-compose exec app php artisan key:generate
+docker-compose exec app php artisan migrate --seed
